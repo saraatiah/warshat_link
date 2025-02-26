@@ -20,8 +20,8 @@ class LoginScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: AppColors.backgroundColor,
       body: Padding(
-        padding: EdgeInsets.symmetric(
-          horizontal: 34.h,
+        padding: const EdgeInsets.symmetric(
+          horizontal: 34,
         ),
         child: Center(
           child: SingleChildScrollView(

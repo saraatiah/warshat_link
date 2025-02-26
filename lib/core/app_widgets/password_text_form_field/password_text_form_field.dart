@@ -8,9 +8,11 @@ import 'bloc/password_field_cubit.dart';
 import 'bloc/password_field_states.dart';
 
 class PasswordTextFormField extends StatelessWidget {
-  const PasswordTextFormField({required this.controller, super.key});
+  PasswordTextFormField(
+      {required this.controller, this.hintText = 'Password', super.key});
 
   final TextEditingController controller;
+  final String hintText;
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +35,7 @@ class PasswordTextFormField extends StatelessWidget {
               : SvgPicture.asset(AppAssets.openedEyeIcon),
         ),
         obscureText: (context.read<PasswordFieldCubit>().hiddenPassword),
-        hintText: "Password",
+        hintText: hintText,
       );
     }));
   }
